@@ -1,4 +1,4 @@
-package edu.sabana.poob;
+package Shapes;
 
 /**
  * Class that encloses all the posible shapes

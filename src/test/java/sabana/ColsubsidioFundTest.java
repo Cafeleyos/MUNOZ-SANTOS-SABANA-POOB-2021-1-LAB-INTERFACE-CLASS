@@ -1,4 +1,4 @@
-package edu.sabana.poob;
+package sabana;
 
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeAll;

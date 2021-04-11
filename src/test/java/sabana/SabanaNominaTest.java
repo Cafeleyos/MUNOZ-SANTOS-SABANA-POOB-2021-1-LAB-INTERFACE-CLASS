@@ -1,4 +1,4 @@
-package edu.sabana.poob;
+package sabana;
 
 import SabanaPayroll.*;
 import org.junit.jupiter.api.BeforeAll;

@@ -1,5 +1,7 @@
-package edu.sabana.poob;
+package shapes;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import Shapes.Triangle;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;

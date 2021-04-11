@@ -1,4 +1,4 @@
-package edu.sabana.poob;
+package Shapes;
 
 public interface GeometricShape3D {
 

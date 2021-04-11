@@ -1,4 +1,4 @@
-package edu.sabana.poob;
+package Shapes;
 
 public class Cylinder extends Circle implements GeometricShape3D {
 
@@ -25,6 +25,6 @@ public class Cylinder extends Circle implements GeometricShape3D {
     }
 
     public double getSuperficialArea() {
-        return (2*Circle.PI*getRadius()*this.height)+(2*Circle.PI*getRadius()*getRadius());
+        return (2* PI *getRadius()*this.height)+(2* PI *getRadius()*getRadius());
     }
 }

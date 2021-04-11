@@ -1,4 +1,4 @@
-package edu.sabana.poob;
+package Shapes;
 
 /**
  * Represents a circle of radius r. Class inherited by Shape

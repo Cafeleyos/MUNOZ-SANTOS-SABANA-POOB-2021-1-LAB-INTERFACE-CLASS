@@ -1,5 +1,6 @@
-package edu.sabana.poob;
+package shapes;
 
+import Shapes.Circle;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
