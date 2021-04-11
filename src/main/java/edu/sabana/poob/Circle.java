@@ -59,4 +59,5 @@ public class Circle extends Shape implements GeometricShape2D {
     public double getDiameter() {
         return 2*radius;
     }
+    public double getRadius(){ return this.radius; }
 }
