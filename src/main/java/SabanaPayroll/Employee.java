@@ -5,11 +5,12 @@ import java.util.UUID;
 /**
  * Represents an employee
  */
-public class Employee {
+public abstract class Employee {
 
     public UUID id;
     private String name, lastname;
     private Department department;
+    private BankAccount account;
 
     /**
      * Constructor for specifying name, lastname and department of the employee
@@ -25,9 +26,7 @@ public class Employee {
      * Base method for calculating the salary
      * @return
      */
-    public double calculateSalary() {
-        return 0;
-    }
+    public abstract double calculateSalary();
 
     public UUID getId() {
         return id;
@@ -46,5 +45,25 @@ public class Employee {
                 this.name, this.lastname, this.department.getName(),
                 Double.toString(calculateSalary()),
                 this.getClass().getSimpleName().equals("EmployeeForHours") ? "hours" : this.getClass().getSimpleName().equals("EmployeeForSalary") ? "salary" : "commissions");
+    }
+
+    /**
+     * adds an specific account if the employee does not have one already defined.
+     * @param account to be added.
+     * @return if was successful
+     */
+    public boolean addAccount(BankAccount account) {
+        if(this.account==null){
+            this.account = account;
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * @return bank account associated.
+     */
+    public BankAccount getBankAccount(){
+        return this.account;
     }
 }

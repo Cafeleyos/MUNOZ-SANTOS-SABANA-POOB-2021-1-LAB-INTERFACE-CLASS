@@ -15,6 +15,14 @@ public class EmployeeForHours extends Employee{
         this.hours = hours;
     }
     /**
+     * Constructor for specifying name, lastname, department, hours of work and bank account.
+     */
+    public EmployeeForHours(String name, String lastname, Department department, double hours, BankAccount account) {
+        super(name, lastname, department);
+        this.hours = hours;
+        super.addAccount(account);
+    }
+    /**
      * Calculates the final salary of this type of employee.
      * @return Salary
      */

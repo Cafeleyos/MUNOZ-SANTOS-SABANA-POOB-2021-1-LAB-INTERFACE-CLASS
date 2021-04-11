@@ -4,13 +4,14 @@ package edu.sabana.poob;
  * Class that encloses all the posible shapes
  */
 
-public class Shape {
+public abstract class Shape {
     private String color;
 
     /**
      * Default constructor.
      */
-    public Shape() {
+    public Shape(){
+
     }
 
     /**
@@ -21,17 +22,13 @@ public class Shape {
         this.color = color;
     }
 
-    public double getArea() {
-        return 0;
-    }
+    public abstract double getArea();
 
     public String getColor() {
         return color;
     }
 
-    public double getPerimeter() {
-        return 0;
-    }
+    public abstract double getPerimeter();
 
     /**
      * Verifies if the given number has decimal numbers.

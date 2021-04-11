@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class TriangleTest {
+    public class TriangleTest {
 
     private static Triangle t;
     private static Triangle tIsosceles;
