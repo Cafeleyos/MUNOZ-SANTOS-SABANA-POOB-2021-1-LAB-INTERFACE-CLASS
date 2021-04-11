@@ -1,7 +1,5 @@
 package SabanaPayroll;
 
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -9,7 +7,6 @@ import java.util.UUID;
 public class ColsubsidioFund implements IFamilyCompensationFund {
 
     private static Map<UUID, Employee> registeredEmployees = new HashMap<>();
-    private ArrayList<Employee> employees = new ArrayList<>();
 
     public ColsubsidioFund() {
 
@@ -23,33 +20,33 @@ public class ColsubsidioFund implements IFamilyCompensationFund {
      */
     @Override
     public boolean registerEmployee(Employee employee) {
-        boolean result = false;
+        boolean result = true;
 
         if(employee.getEmployeeMethodPay().equals("commission")) {
-            result = true;
+            result = false;
         }
         else{
-            for(Employee e : employees) {
-                if(e.getId() == employee.getId()) {
-                    result = true;
+            for(Employee e : registeredEmployees.values()) {
+                if (e.getId() == employee.getId()) {
+                    result = false;
+                    break;
                 }
             }
         }
+        if(result) {
+            registeredEmployees.put(employee.getId(), employee);
+        }
 
-        return result == true ? false : employees.add(employee) ;
+        return result;
     }
 
     @Override
     public boolean deleteEmployee(UUID id) {
         boolean result = false;
-        int index = 0;
+        Employee e;
 
-        for(index = 0; index < employees.size(); index++) {
-            if(employees.get(index).getId() == id) {
-                employees.remove(index);
-                result = true;
-            }
-        }
+        e = registeredEmployees.get(id);
+        result = registeredEmployees.remove(id, e);
 
         return result;
     }
@@ -57,13 +54,8 @@ public class ColsubsidioFund implements IFamilyCompensationFund {
     @Override
     public boolean isEmployeeRegistered(UUID id) {
         boolean result = false;
-        int index = 0;
 
-        for(index = 0; index < employees.size(); index++) {
-            if(employees.get(index).getId() == id) {
-                result = true;
-            }
-        }
+       result = registeredEmployees.containsKey(id);
 
         return result;
     }
