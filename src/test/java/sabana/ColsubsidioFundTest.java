@@ -19,6 +19,7 @@ public class ColsubsidioFundTest {
     private static Department department;
 
     private static EmployeeForSalary EmployeeForSalary;
+    private static EmployeeForSalary EmployeeForSalary2;
     private static EmployeeForHours EmployeeForHours;
     private static EmployeeForCommission EmployeeForCommission;
 
@@ -31,11 +32,13 @@ public class ColsubsidioFundTest {
         department = new Department("Engineering");
 
         EmployeeForSalary = new EmployeeForSalary(faker.name().firstName(), faker.name().lastName(), department, 1000000);
+        EmployeeForSalary2 = new EmployeeForSalary(faker.name().firstName(), faker.name().lastName(), department, 1200000);
         EmployeeForHours = new EmployeeForHours(faker.name().firstName(), faker.name().lastName(), department, 40);
         EmployeeForCommission = new EmployeeForCommission(faker.name().firstName(), faker.name().lastName(), department, 100);
 
         employees = new ArrayList<>();
         employees.add(EmployeeForSalary);
+        employees.add(EmployeeForSalary2);
         employees.add(EmployeeForHours);
         employees.add(EmployeeForCommission);
 
@@ -46,7 +49,7 @@ public class ColsubsidioFundTest {
     @DisplayName("GIVEN a employee by salary WHEN try to register THEN success")
     public void shouldRegisterEmployee() {
 
-        assertTrue(colsubsidioFund.registerEmployee(EmployeeForSalary));
+        assertTrue(colsubsidioFund.registerEmployee(EmployeeForSalary2));
     }
 
     @Test
@@ -83,8 +86,8 @@ public class ColsubsidioFundTest {
     @DisplayName("GIVEN a employee by salary registered WHEN try to validate is registered THEN success")
     public void shouldValidateEmployeeIsRegistered() {
 
-        assertTrue(colsubsidioFund.registerEmployee(EmployeeForSalary));
-        assertTrue(colsubsidioFund.isEmployeeRegistered(EmployeeForSalary.getId()));
+        assertTrue(colsubsidioFund.registerEmployee(EmployeeForHours));
+        assertTrue(colsubsidioFund.isEmployeeRegistered(EmployeeForHours.getId()));
     }
 
     @Test
@@ -101,4 +104,8 @@ public class ColsubsidioFundTest {
         assertNotNull(benefits);
     }
 
+
+    public void clear() {
+
+    }
 }
