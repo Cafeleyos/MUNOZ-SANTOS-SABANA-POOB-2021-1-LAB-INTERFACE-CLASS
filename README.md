@@ -1,85 +1,113 @@
-# LAB-INHERITANCE
+# LAB-INTERFACES
 
-## Parte I - Entendiendo herencia
+## Dependencias
 
-* Lea atentamente las clases `Circle` y `Shape`.
-* Para la clase `Circle`, defina `PI` como una propiedad constante, esto implica que tenga modificadores `final` y `static`.
-* Para la clase `Circle`, sobreescriba el método `getArea` de tal forma que todas las pruebas de la clase `CircleTest` para ese método pasen. Agrege pruebas adicionales.
-* Para la clase `Circle`, sobreescriba el método `getPerimeter` de tal forma que todas las pruebas de la clase `CircleTest` para ese método pasen. Agrege pruebas adicionales.
-* Para la clase `Circle`, implemente el método `getArea` de tal forma que todas las pruebas de la clase `CircleTest` para ese método pasen. Agrege pruebas adicionales.
-* Para la clase `Circle`, sobreescriba el método `toString` de tal forma que todas las pruebas de la clase `CircleTest` para ese método pasen, debe usar la implementación de la superclase `Shape`. Agrege pruebas adicionales.
+* Laboratorio de clases abstractas.
+* Laboratorio de herencia.
+
+## Parte I - Entendiendo las Interfaces `Shapes`
+
+* Use la implementación que realizo a lo largo de los laboratorios de herencia y clases abstratas para lograr que las pruebas de `CircleTest` pasen de forma efectiva.
+* Lea atentamente el siguiente diagrama y responda:
+    * ¿Cuál es la relación entre `Circle` y `Shape`?
+    * ¿Cuál es la relación entre `Cylinder` y `Shape`?
+    * ¿Cuál es la relación entre `Circle` y `GeometricShape2D`?
+    * ¿Cuál es la relación entre `Cylinder` y `GeometricShape3D`?
+
+![](img/shapes-init-class-diagram.svg)
+
+* Lea atentamente las clases `Circle`, `Cylinder`, `GeometricShape2D`, `GeometricShape3D` y `Shape`.
+* Use la implementación de los métodos de `getArea` y `getPerimeter` que realizo en el laboratorio de herencia para completar la implementación de `Circle`.
+* Verifique que todas las pruebas de `CircleTest` pasen de forma efectiva.
+* Para la clase `Cylinder`, sobreescriba el método `getVolume` de tal forma que todas las pruebas de la clase `CylinderTest` para ese método pasen. Agrege pruebas adicionales.
+* Para la clase `Cylinder`, sobreescriba el método `getSuperficialArea` de tal forma que todas las pruebas de la clase `CylinderTest` para ese método pasen. Agrege pruebas adicionales.
 * Tome una captura de pantalla como evidencia de las pruebas que logro ejecutar de forma exitosa.
 
-## Parte II - Implementando herencia
+## Parte II - Implementando Interfaces
 
-* Revise con atención el diagrama de clases de esta sección.
-* En el archivo de SOLUTION.md cargue las imagenes de sus diseños y evidencia de ejecución de pruebas.
+![](img/shapes-design-class-diagram.svg)
 
-![](img/shapes-class-diagram.svg)
+En el diagrama anterior se definen las clases `Triangle`, `Pyramid`, `Rectangle`, `RectangleSolid` y `Cube`.
 
-### Clase `Triangle`
+### Implementando `GeometricShape2D`
 
-* Construya la clase `Triangle`, asegurese que herede de `Shape`.
-* Implemente cada uno de los constructores propuestos en el diseño para la clase `Triangle`. Debe usar los constructores heredados de la clase `Shape` cuando corresponda y asignar los valores por defecto para las propiedades.
-* Construya la clase de pruebas `TriangleTest`.
-* Dentro de la clase `TriangleTest` construya pruebas para los métodos `getArea`, `getPerimeter`, `isIsoceles`, `isEquilateral` y `toString`. Aegurese de hacer pruebas para triangulos instanciados con todos los constructores anteriormente definidos.
-* Implemente el código necesario en la clase `Triangle` para que las pruebas pasen.
+* Cree las clases `Triangle` y `Rectangle`. 
+* Haga que las clases hereden de `Shape`.
+* Haga que las clases implementen la interfaz `GeometricShape2D`.
+* Cree las clases de pruebas `TriangleTest` y `RectangleTest`.
+* Agregue pruebas para los métodos `getArea` y `getPerimeter`, asegurese de usar todos los constructores de las clases que se están probando.
+* Realice las implementaciones que necesite en las clases `Triangle` y `Rectangle` para que las pruebas que definio pasen.
 
-### Clase `Rectangle`
+### Implementando `GeometricShape3D`
 
-* Construya la clase `Rectangle`, asegurese que herede de `Shape`.
-* Implemente cada uno de los constructores propuestos en el diseño para la clase `Rectangle`. Debe usar los constructores heredados de la clase `Shape` cuando corresponda y asignar los valores por defecto para las propiedades.
-* Construya la clase de pruebas `RectangleTest`.
-* Dentro de la clase `RectangleTest` construya pruebas para los métodos `getArea`, `getPerimeter`, `getDiagonal`, y `toString`. Aegurese de hacer pruebas para rectangulos instanciados con todos los constructores anteriormente definidos.
-* Implemente el código necesario en la clase `Rectangle` para que las pruebas pasen.
+* Cree las clases `Pyramid` y `RectangleSolid`. 
+* Haga que las clases hereden de `Triangle` y `Rectangle` según corresponda.
+* Haga que las clases implementen la interfaz `GeometricShape3D`.
+* Cree las clases de pruebas `PyramidTest` y `RectangleSolidTest`.
+* Agregue pruebas para los métodos `getArea`, `getPerimeter`, `getVolume` y `getSuperficialArea`, asegurese de usar todos los constructores de las clases que se están probando.
+* Realice las implementaciones que necesite en las clases `Pyramid` y `RectangleSolid` para que las pruebas que definio pasen.
+
+### `Cube`
+
+* Cree la clase Cube.
+* Haga que la clase herede de `RectangleSolid`.
+* Cree la clase de pruebas `CubeTest`.
+* Agregue pruebas para los métodos `getArea`, `getPerimeter`, `getVolume` y `getSuperficialArea`, asegurese de usar todos los constructores de la clase `Cube`.
+* Todas las pruebas deberían pasar inmediatamente sin hacer modificaciones en la clase `Cube`.
+
+## Parte III - Diseñando Interfaces
+
+* Diseñe la clase `Sphere`. Recuerde que es un solido que puede derivarse de la clase `Circle`.
+* Diseñe la interfaz `TrigonometricShape`, esta interfaz define que de un figura se pueden calcular:
+    * `getSen` - Obtener el seno.
+    * `getCos` - Obtener el coseno.
+    * `getTan` - Obtener la tangente.
+* Indique que la clase `Triangle` implementa esta interfaz.
+* NO modifique el código, solo exponga la propuesta del nuevo diseño.
+* En el archivo de SOLUTION.md cargue las imagenes de sus diseños.
+
+## Parte IV - Interfaces Implementando en un contexto
+
+Las cajas de compensación son esenciales a la hora de hablar de un sistema de Nomina, para el caso del sistema `SabanaPayroll` vamos a contar con dos posibles opciones, `ColsubsidioFund` y `CompensarFund`, cada una de ellas es capaz de:
+
+* Registrar a un empleado
+* Informar si un empleado esta registrado
+* Eliminar a un empleado
+* Imprimir la lista de los beneficios
+
+La única diferencia entre `ColsubsidioFund` y `CompensarFund` además de sus beneficios, es la forma en la que manejan el registro de los empleados inscritos, `ColsubsidioFund` basa su funcionalidad en un `HashMap`, no permite empleados que sean pagados por comision y `CompensarFund` basa su funcionalidad en un `List` y no permite empleados que sean pagados por horas. Revise con atención el código de dichas clases.
+
+![](img/sabanapayroll-class-diagram-Fund.svg)
+
+* Lea el diagrama de clases propuesto.
+* El laboratorio tiene adjunto el código de las clases propuestas y las pruebas, integre el código del laboratorio anterior.
+* Lea las pruebas con atención.
+* Implemente el código necesario en la clase `ColsubsidioFund` para que las pruebas de la clase `ColsubsidioFundTest` pasen.
+* Cree la clase `CompensarFundTest` y agregue pruebas similares.
+* Implemente el código necesario en la clase `CompensarFund` para que las pruebas de la clase `CompensarFundTest` pasen.
+* Cree una tercera caja de compensación llamada `CafamFund` haga que esta implementación maneje el registro de empleados usando un `Set`, este permitirá el registro de todos los tipos de empleado, cree la clase `CafamFundTest` agregue los tests correspondientes e implemente el código necesario para que las pruebas pasen.   
  
- ### Clase `Square`
- 
- * Construya la clase `Square`, asegurese que herede de `Rectangle`.
- * Implemente cada uno de los constructores propuestos en el diseño para la clase `Square`. Debe usar los constructores heredados de la clase `Rectangle` cuando corresponda y asignar los valores por defecto para las propiedades.
- * Construya la clase de pruebas `SquareTest`.
- * Dentro de la clase `RectangleTest` construya pruebas para los métodos `getArea`, `getPerimeter`, `getDiagonal`, y `toString`. Aegurese de hacer pruebas para cuadrados instanciados con todos los constructores anteriormente definidos.
- * NO debe sobreescribir ningún método, con la implementación de la clase `Rectangle` todas sus pruebas deberían ejecutarse satisfactoriamente.
- 
- ## Parte III - Diseñando Herencia
- 
- * Realmente no esta bien que tengamos los métodos `isIsosceles` y `isEquilateral`, proponga un diseño por medio del cuál usted define clases para abstraer el concepto de estos dos tipos de triangulos; diseñe en UML las propiedades, métodos y relaciones de herencia de estas nuevas clases.
- * NO modifique el código, solo exponga la propuesta del nuevo diseño.
- * En el archivo de SOLUTION.md cargue las imagenes de sus diseños.
- 
- ## Parte IV - Herencia en un contexto
- 
- Lea el siguiente caso de negocio:
- 
- La Universidad de la Sabana que tiene múltiples empleados y departamentos necesita que usted diseñe el sistema de nomina llamado `SabanaPayroll`, para ello la empresa le ha dado la siguiente información:
- * Los departamentos cuentan con un identificador único y nombre.
- * Todos los empleados cuentan con nombre, apellido, identificador único y departamento para el que trabajan.
- * La empresa cuenta con 3 tipos de empleados, los que reciben el pago por salario fijo, los que reciben el pago por comisión y los que reciben el pago por horas.
-    * Por horas: El salario se calcula usando una constante fija del valor de la hora y se multiplica por el total de horas trabajadas.
-    * Por salario: El salario fijo mensual menos las prestaciones sociales, el 4% de salud y 4% de pensión. Debe poder consultarse cuál es el valor del descuento de las prestaciones. 
-    * Por comisión: El salario se calcula usando una constante fija del valor de la comisión y se multiplica por el total de productos vendidos.
- * El sistema debería permitir:
-    * Calcular el salario para cualquier empleado.
-    * Calcular el salario de todos los empleados de un departamento.
-    * Calcular el salario de toda la Universidad.
-    * Imprimir en pantalla la lista de empeados de la siguiente forma
-    
-```
-Juan Perez, departamento FINANZAS, salaraio $23424.4, pago por horas 
-Jorge Gómez, departamento VENTAS, salaraio $23424.4, pago por salario
-Laura Beltran, departamento INGENIERÍA, salaraio $23424.4, pago por comisión
-```
- 
- 1. Use el diagrama de clases inicial para terminar de diseñar el sistema completo, incluya todo lo que considere necesario, atributos, métodos, relaciones.
- 2. Diseñe el diagrama de secuencia para los métodos `printPayroll`, `calculateEmployeeSalary`, `calculateDepartmentSalaries`, y `calculateUniversitySalaries`.
- 3. Cree la clase `SabanaNominaTest` y cree diversas pruebas para los métodos anteriormente mencionados.
- 4. Implemente los métodos y asegurese que las pruebas están bien diseñadas y se ejecutan de manera correcta.
- 5. En el archivo de SOLUTION.md cargue las imagenes de sus diseños y evidencia de ejecución de pruebas.
- 
- ![](img/sabanapayroll-class-diagram.svg) 
- 
+## Parte V - Interfaces Integrando
+
+1. Use el diagrama de clases inicial para terminar de diseñar el sistema completo, incluya todo lo que considere necesario, atributos, métodos, relaciones.
+2. Diseñe el diagrama de secuencia para los métodos `assigneFamilyCompensation`.
+3. A la clase `SabanaNominaTest` que ya debe existir agregue diversas pruebas para los métodos anteriormente mencionados. (Revise las pruebas adjuntas como una base para las suyas.)
+4. Implemente los métodos y asegurese que las pruebas están bien diseñadas y se ejecutan de manera correcta. (Revise el código adjunto como una guía para su código)
+5. En el archivo de SOLUTION.md cargue las imagenes de sus diseños y evidencia de ejecución de pruebas.
+
+## Parte VI - Interfaces Diseñando en un contexto
+
+Diseñe el siguiente caso de negocio, no modifique el código, solo proponga el diseño. En el archivo de SOLUTION.md cargue las imagenes de sus diseños.
+
+La universidad ha decidido integrar el sistema de EPS's al sistema de nomina, para hacerlo comenzará con tres empresas, `CompensarEPS`, `SanitasEPS` y `ProteccionEPS`. Las tres compañías deben soportar el comportamiento de:
+
+* `registerEmployee`.
+* `isEmployeeRegistered`.
+* `deleteEmploye`.
+* `discountInabilityFee`.
+
  ## Condiciones
  
  * Todos los editables de los diagramas de este laboratorio se encuentran en la carpeta `diagrams`.
- * Cree un repositorio llamado APELLIDO1-APELLIDO2-APELLIDO3-SABANA-POOB-2021-1-LAB-INHERITANCE en GitHub y suba a llí la solución del laboratiorio.
+ * Cree un repositorio llamado APELLIDO1-APELLIDO2-APELLIDO3-SABANA-POOB-2021-1-LAB-ABSTRACT-CLASS en GitHub y suba a llí la solución del laboratiorio.
  * Cree un archivo SOLUTION.md donde deberá documentar toda la solución del laboratorio. NO MODIFIQUE EL README.md.
