@@ -22,13 +22,11 @@ public abstract class Shape {
         this.color = color;
     }
 
-    public abstract double getArea();
-
     public String getColor() {
         return color;
     }
 
-    public abstract double getPerimeter();
+
 
     /**
      * Verifies if the given number has decimal numbers.

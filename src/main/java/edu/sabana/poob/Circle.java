@@ -3,7 +3,7 @@ package edu.sabana.poob;
 /**
  * Represents a circle of radius r. Class inherited by Shape
  */
-public class Circle extends Shape {
+public class Circle extends Shape implements GeometricShape2D {
 
     public static final double PI = Math.PI;
     private double radius;
@@ -34,12 +34,12 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
-    @Override
+
     public double getArea() {
         return PI*radius*radius;
     }
 
-    @Override
+
     public double getPerimeter() {
         return 2*PI*radius;
     }

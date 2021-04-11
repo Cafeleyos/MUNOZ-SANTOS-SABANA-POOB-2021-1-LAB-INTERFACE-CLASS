@@ -47,12 +47,12 @@ public class Rectangle extends Shape {
         return Math.sqrt(Math.pow(width, 2)+Math.pow(length, 2));
     }
 
-    @Override
+
     public double getArea() {
         return width*length;
     }
 
-    @Override
+
     public double getPerimeter() {
         return (2*width)+(2*length);
     }
