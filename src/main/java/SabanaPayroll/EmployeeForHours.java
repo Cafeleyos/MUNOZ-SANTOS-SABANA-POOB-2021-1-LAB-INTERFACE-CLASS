@@ -41,4 +41,9 @@ public class EmployeeForHours extends Employee{
     public Double getSalary() {
         return calculateSalary();
     }
+
+    @Override
+    public String getEmployeeMethodPay() {
+        return "hours";
+    }
 }

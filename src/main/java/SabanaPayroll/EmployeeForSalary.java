@@ -61,4 +61,9 @@ public class EmployeeForSalary extends Employee {
     public String toString() {
         return super.toString();
     }
+
+    @Override
+    public String getEmployeeMethodPay() {
+        return "salary";
+    }
 }

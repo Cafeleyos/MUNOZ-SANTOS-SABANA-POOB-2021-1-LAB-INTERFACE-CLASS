@@ -43,4 +43,9 @@ public class EmployeeForCommission extends Employee{
     public String toString() {
         return super.toString();
     }
+
+    @Override
+    public String getEmployeeMethodPay() {
+        return "commission";
+    }
 }

@@ -66,4 +66,9 @@ public abstract class Employee {
     public BankAccount getBankAccount(){
         return this.account;
     }
+
+
+    public String getEmployeeMethodPay() {
+        return null;
+    }
 }
