@@ -1,5 +1,7 @@
 package Shapes;
 
+import java.util.ArrayList;
+
 /**
  * Represents a triangle. Class inherited by Shape
  */
@@ -114,4 +116,11 @@ public class Triangle extends Shape implements GeometricShape2D{
                 ,side3);
     }
 
+    public double[] getSides() {
+        double list[] = new double[3];
+        list[0] = side1;
+        list[1] = side2;
+        list[2] = side3;
+        return list;
+    }
 }

@@ -57,6 +57,9 @@ public class Rectangle extends Shape implements GeometricShape2D {
         return (2*width)+(2*length);
     }
 
+    public double getWidth(){return this.width;}
+
+    public double getLength() { return length; }
     /**
      * returns the class name, the color, the width and length
      */
