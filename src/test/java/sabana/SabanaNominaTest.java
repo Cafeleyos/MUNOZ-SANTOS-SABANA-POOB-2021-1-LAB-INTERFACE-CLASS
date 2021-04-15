@@ -169,7 +169,7 @@ public class SabanaNominaTest {
         assertTrue(sabanaPayRoll.assigneFamilyCompesation(s1.getId(), colFund));
         assertFalse(sabanaPayRoll.assigneFamilyCompesation(c2.getId(), colFund));
         assertTrue(sabanaPayRoll.assigneFamilyCompesation(e1h.getId(), colFund));
-        assertTrue(sabanaPayRoll.assigneFamilyCompesation(e2h.getId(), comFund));
+        assertFalse(sabanaPayRoll.assigneFamilyCompesation(e2h.getId(), comFund));
         assertTrue(sabanaPayRoll.assigneFamilyCompesation(c1.getId(), comFund));
     }
 
