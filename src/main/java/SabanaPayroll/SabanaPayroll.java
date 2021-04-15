@@ -139,6 +139,21 @@ public class SabanaPayroll {
         return result;
     }
 
+    public boolean assigneFamilyCompesation(UUID uuid, IFamilyCompensationFund fcf) {
+        boolean result = false;
+        int i = 0;
 
+        for(Department d: departments) {
+            for(i = 0; i < d.getEmployees().size(); ) {
+                if(uuid == d.getEmployees().get(i).getId()) {
+                    fcf.registerEmployee(d.getEmployees().get(i));
+                    result = true;
+                    break;
+                }
+            }
+        }
 
+        return result;
+    }
+    
 }

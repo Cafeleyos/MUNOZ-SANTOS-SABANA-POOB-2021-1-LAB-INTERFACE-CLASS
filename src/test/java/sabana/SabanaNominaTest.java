@@ -17,6 +17,8 @@ public class SabanaNominaTest {
     private static EmployeeForHours e3h;
     private static EmployeeForSalary s1,s2,s3;
     private static EmployeeForCommission c1,c2,c3;
+    private static ColsubsidioFund colFund;
+    private static CompensarFund comFund;
     private static BankAccount a1,a2,a3,a4,a5,a6;
 
     @BeforeAll
@@ -40,6 +42,7 @@ public class SabanaNominaTest {
         c1 = new EmployeeForCommission("David","Guarnizo",F,100,a5);
         c2 = new EmployeeForCommission("Diana","Sanchez",V,200,a6);
         c3 = new EmployeeForCommission("Erika","Rojas",I,0);
+        colFund = new ColsubsidioFund();
         F.addEmployee(e1h);
         F.addEmployee(s1);
         F.addEmployee(c1);
@@ -161,6 +164,14 @@ public class SabanaNominaTest {
         assertEquals(sabanaPayRoll.calculateAllEmployeesBalance(),1.2079E7);
     }
 
+    @Test
+    public void shouldAddEmployeeToFamilyCompesationFund() {
+        assertTrue(sabanaPayRoll.assigneFamilyCompesation(s1.getId(), colFund));
+        assertFalse(sabanaPayRoll.assigneFamilyCompesation(c2.getId(), colFund));
+        assertTrue(sabanaPayRoll.assigneFamilyCompesation(e1h.getId(), colFund));
+        assertTrue(sabanaPayRoll.assigneFamilyCompesation(e2h.getId(), comFund));
+        assertTrue(sabanaPayRoll.assigneFamilyCompesation(c1.getId(), comFund));
+    }
 
     public void resetDeposits(){
         a1.clearAccount(12345);
