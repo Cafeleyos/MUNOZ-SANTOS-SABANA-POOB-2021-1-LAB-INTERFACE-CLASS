@@ -60,6 +60,7 @@
 ## Parte V - Interfaces Integrando
 ### `Diagrama de Clases`
 ![](img/sabanapayroll-class-diagram-partV.png)
+### `SabanaNominaTest`
 ![](img/SabanaNominaTest.PNG)
 
 
