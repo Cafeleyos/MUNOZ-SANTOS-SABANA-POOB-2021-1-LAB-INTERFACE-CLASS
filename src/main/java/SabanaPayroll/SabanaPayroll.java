@@ -144,10 +144,9 @@ public class SabanaPayroll {
         int i = 0;
 
         for(Department d: departments) {
-            for(i = 0; i < d.getEmployees().size(); ) {
+            for(i = 0; i < d.getEmployees().size(); i++) {
                 if(uuid == d.getEmployees().get(i).getId()) {
-                    fcf.registerEmployee(d.getEmployees().get(i));
-                    result = true;
+                    result = fcf.registerEmployee(d.getEmployees().get(i));
                     break;
                 }
             }
