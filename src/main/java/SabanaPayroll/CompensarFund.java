@@ -9,14 +9,12 @@ public class CompensarFund implements IFamilyCompensationFund {
     private static List<Employee> registeredEmployees = new ArrayList<>();
 
     public CompensarFund() {
-
     }
 
     /**
-     * No permite registrar empleados de tipo EmployeeByHours.
-     *
-     * @param employee
-     * @return
+     * Registers a given employee to the Fund. Does not admit Employees payed by hours
+     * @param employee to register
+     * @return if it was registered
      */
     @Override
     public boolean registerEmployee(Employee employee) {
@@ -40,6 +38,11 @@ public class CompensarFund implements IFamilyCompensationFund {
         return result;
     }
 
+    /**
+     * Removes an employee from the Fund
+     * @param id employee id
+     * @return if it was removed
+     */
     @Override
     public boolean deleteEmployee(UUID id) {
         boolean result = false;
@@ -55,7 +58,11 @@ public class CompensarFund implements IFamilyCompensationFund {
 
         return result;
     }
-
+    /**
+     * Checks if and employee is already registered
+     * @param id employee id
+     * @return if is is registered.
+     */
     @Override
     public boolean isEmployeeRegistered(UUID id) {
         boolean result = false;
@@ -71,6 +78,10 @@ public class CompensarFund implements IFamilyCompensationFund {
         return result;
     }
 
+    /**
+     * Tell the benefits of this particular fund
+     * @return paragraph of the benefits
+     */
     @Override
     public String printBenefits() {
         return "Preferential corporate rates.\n" +

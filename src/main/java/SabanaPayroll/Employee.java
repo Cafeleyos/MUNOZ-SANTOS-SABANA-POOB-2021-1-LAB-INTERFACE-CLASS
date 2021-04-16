@@ -79,8 +79,5 @@ public abstract class Employee {
         return this.account;
     }
 
-
-    public String getEmployeeMethodPay() {
-        return null;
-    }
+    public abstract String getEmployeeMethodPay();
 }
