@@ -9,14 +9,12 @@ public class ColsubsidioFund implements IFamilyCompensationFund {
     private static Map<UUID, Employee> registeredEmployees = new HashMap<>();
 
     public ColsubsidioFund() {
-
     }
 
     /**
-     * No permite registrar empleados de tipo EmployeeByCommission.
-     *
-     * @param employee
-     * @return
+     * Registers a given employee to the Fund. Does not admit Employees payed by commission
+     * @param employee to register
+     * @return if it was registered
      */
     @Override
     public boolean registerEmployee(Employee employee) {
@@ -39,7 +37,11 @@ public class ColsubsidioFund implements IFamilyCompensationFund {
 
         return result;
     }
-
+    /**
+     * Removes an employee from the Fund
+     * @param id employee id
+     * @return if it was removed
+     */
     @Override
     public boolean deleteEmployee(UUID id) {
         boolean result = false;
@@ -51,6 +53,11 @@ public class ColsubsidioFund implements IFamilyCompensationFund {
         return result;
     }
 
+    /**
+     * Checks if and employee is already registered
+     * @param id employee id
+     * @return if is is registered.
+     */
     @Override
     public boolean isEmployeeRegistered(UUID id) {
         boolean result = false;
@@ -60,6 +67,10 @@ public class ColsubsidioFund implements IFamilyCompensationFund {
         return result;
     }
 
+    /**
+     * Tell the benefits of this particular fund
+     * @return paragraph of the benefits
+     */
     @Override
     public String printBenefits() {
         return "By being an affiliate, you are benefited with discounts, programs, credits, information, insurance, " +

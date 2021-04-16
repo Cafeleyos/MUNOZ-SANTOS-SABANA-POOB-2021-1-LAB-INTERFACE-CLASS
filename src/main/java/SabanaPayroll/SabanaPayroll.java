@@ -139,6 +139,12 @@ public class SabanaPayroll {
         return result;
     }
 
+    /**
+     * Assigns to a an employee(given its id) a given CompensationFund.
+     * @param uuid of the employee
+     * @param fcf a compensation fund
+     * @return if it was successful
+     */
     public boolean assigneFamilyCompesation(UUID uuid, IFamilyCompensationFund fcf) {
         boolean result = false;
         int i = 0;
