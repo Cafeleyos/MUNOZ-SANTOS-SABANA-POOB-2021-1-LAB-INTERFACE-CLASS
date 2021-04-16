@@ -43,6 +43,7 @@ public class SabanaNominaTest {
         c2 = new EmployeeForCommission("Diana","Sanchez",V,200,a6);
         c3 = new EmployeeForCommission("Erika","Rojas",I,0);
         colFund = new ColsubsidioFund();
+        comFund = new CompensarFund();
         F.addEmployee(e1h);
         F.addEmployee(s1);
         F.addEmployee(c1);
