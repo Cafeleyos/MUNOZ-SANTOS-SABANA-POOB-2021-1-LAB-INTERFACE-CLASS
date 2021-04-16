@@ -11,6 +11,7 @@ public abstract class Employee {
     private String name, lastname;
     private Department department;
     private BankAccount account;
+    private IFamilyCompensationFund compesationFund = null;
 
     /**
      * Constructor for specifying name, lastname and department of the employee
@@ -34,6 +35,17 @@ public abstract class Employee {
 
     public Department getDepartment() {
         return department;
+    }
+
+    public boolean addCompesationFund(IFamilyCompensationFund fcf) {
+        boolean result = false;
+
+        if(compesationFund == null) {
+            this.compesationFund = fcf;
+            result = true;
+        }
+
+        return result;
     }
 
     /**

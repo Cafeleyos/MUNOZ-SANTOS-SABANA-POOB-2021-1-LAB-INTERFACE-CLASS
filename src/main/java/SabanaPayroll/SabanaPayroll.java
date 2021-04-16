@@ -140,13 +140,18 @@ public class SabanaPayroll {
     }
 
     public boolean assigneFamilyCompesation(UUID uuid, IFamilyCompensationFund fcf) {
-        boolean result = false;
+        boolean result = false, exist = false;
         int i = 0;
+
 
         for(Department d: departments) {
             for(i = 0; i < d.getEmployees().size(); i++) {
                 if(uuid == d.getEmployees().get(i).getId()) {
-                    result = fcf.registerEmployee(d.getEmployees().get(i));
+                    exist = d.getEmployees().get(i).addCompesationFund(fcf);
+
+                    if(exist) {
+                        result = fcf.registerEmployee(d.getEmployees().get(i));
+                    }
                     break;
                 }
             }
