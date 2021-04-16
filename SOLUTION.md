@@ -44,26 +44,25 @@
 ### Diseño
 ![](img/New-Design-shapes.png)
 
+
 ## Parte IV - Herencia en un contexto
 ### Diseños
 ### `Diagrama de Clases`
 ![](img/sabanapayroll-class-diagram.png)
+### `ColsubsidioFundTest`
+![](img/ColsubsidioFundTest.PNG)
+### `CompensarFundTest`
+![](img/CompensarFundTest.PNG)
+### `Diagrama de Clases`
+![](img/CafamFundTest.PNG)
 
-### `Diseño printPayroll`
-![](img/printpayroll-class-diagram.png)
 
-### `Diseño calculateEmployeeSalary`
-![](img/calculateemployeesalary-class-diagram.png)
+## Parte V - Interfaces Integrando
+### `Diagrama de Clases`
+![](img/sabanapayroll-class-diagram-partV.png)
+![](img/SabanaNominaTest.PNG)
 
-### `Diseño calculateDepartmentSalaries`
-![](img/calculatedepartmentsalaries-class-diagram.png)
 
-### `Diseño calculateUniversitySalaries`
-![](img/calculateuniversitysalaries-class-diagram.png)
-
-### Evidencias
-### `Evidencia Test`
-![](img/test-passed-sabanapayroll-system.PNG)
-
-### `Imprimir la lista de empleados`
-![](img/print-employee-sabanapayroll-system.PNG)
+## Parte VI - Interfaces Diseñando en un contexto
+### `Diagrama de Clases`
+![](img/epssystem-class-diagram.png)
