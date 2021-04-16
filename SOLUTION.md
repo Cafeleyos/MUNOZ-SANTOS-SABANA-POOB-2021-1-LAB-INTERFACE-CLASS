@@ -1,4 +1,4 @@
-# SOLUTION LAB-INHERITANCE
+# SOLUCIÓN LAB- INTERFACES
 ## Parte I - Entendiendo las Interfaces `Shape`
 
 * ¿Cuál es la relación entre `Circle` y `Shape`?
@@ -24,7 +24,7 @@
 ### Evidencia de pruebas clase `CylinderTest`
 ![](img/CylinderTest.png)
 
-## Parte II - Implementando herencia
+## Parte II - Implementando interfaces
 
 ### Evidencia de pruebas clase `PyramidTest`
 ![](img/PyramidTest.png)
@@ -40,12 +40,12 @@
 ![](img/CubeTest.png)
 
 
-## Parte III - Diseñando Herencia
+## Parte III - Diseñando interfaces
 ### Diseño
 ![](img/New-Design-shapes.png)
 
+## Parte IV - Interfaces implementadas en un contexto
 
-## Parte IV - Herencia en un contexto
 ### Diseños
 ### `Diagrama de Clases`
 ![](img/sabanapayroll-class-diagram.png)
