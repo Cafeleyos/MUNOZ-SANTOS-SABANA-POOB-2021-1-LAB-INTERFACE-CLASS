@@ -1,35 +1,48 @@
 # SOLUTION LAB-INHERITANCE
 ## Parte I - Entendiendo las Interfaces `Shape`
-### Respuesta
+
 * ¿Cuál es la relación entre `Circle` y `Shape`?
   
-    La relación entre Circle y Shape es de herencia, Circle hereda de Shape.
+    La relación entre Circle y Shape es de herencia, Circle es un Shape.
+  
+
 * ¿Cuál es la relación entre `Cylinder` y `Shape`?
 
-    La relación entre Cylinder y Shape es de herencia, Cylinder hereda de Circle y este hereda de Shape.
+    La relación entre Cylinder y Shape es de herencia, Cylinder es un Circle y por ende es un Shape.
+  
+
 * ¿Cuál es la relación entre `Circle` y `GeometricShape2D`?
   
-    La relación entre Circle y GeometricShape2D es: Circle es un GeometricShape2D.
+     Circle es un GeometricShape2D.
+  
+
 * ¿Cuál es la relación entre `Cylinder` y `GeometricShape3D`?
 
-  La relación entre Cylinder y GeometricShape3D es: Cylinder es un GeometricShape3D.
+   Cylinder es un GeometricShape3D.
+### Evidencia de pruebas clase `CircleTest`
+![](img/CircleTest.png)
+### Evidencia de pruebas clase `CylinderTest`
+![](img/CylinderTest.png)
+
 ## Parte II - Implementando herencia
-### Evidencia Diseño
 
-![](img/shaper-class-diagram.png)
+### Evidencia de pruebas clase `PyramidTest`
+![](img/PyramidTest.png)
+### Evidencia de pruebas clase `RectangleSolidTest`
+![](img/RectangleSolidTest.png)
 
-### Clase `Triangle` evidencia test
-![](img/test-passed-triangle-class.PNG)
+### Evidencia de pruebas clase `TriangleTest`
+![](img/TriangleTest.png)
+### Evidencia de pruebas clase `RectangleTest`
+![](img/RectangleTest.png)
 
-### Clase `Rectangle` evidencia test
-![](img/test-passed-rectangle-class.PNG)
- 
-### Clase `Square` evidencia test
-![](img/test-passed-square-class.PNG) 
+### Evidencia de pruebas clase `CubeTest`
+![](img/CubeTest.png)
+
 
 ## Parte III - Diseñando Herencia
 ### Diseño
-![](img/shapes-class-2-diagram.png)
+![](img/New-Design-shapes.png)
 
 ## Parte IV - Herencia en un contexto
 ### Diseños
